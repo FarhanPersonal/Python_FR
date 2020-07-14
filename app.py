@@ -3,26 +3,21 @@ class Point:
     # Class level attribute
     default_color = "red"
 
+    #Class level method or factory method
+    @classmethod
+    def zero(cls): 
+        return cls(0,0)
+
+    #Constructor
     def __init__(self, x, y):
         self.x = x
         self.y = y
 
+    #Instance method
     def draw(self):
-        print("draw")
+        print(self.x, self.y)
 
 
-point = Point(1, 2)
+point = Point.zero()
 
-Point.default_color = "Yellow"
-
-anotherPoint = Point(3, 4)
-
-point.default_color = "blue"
-
-print(point.default_color)
-print(anotherPoint.default_color)
-
-# FR: Creating attributes/properties of point object outside the class
-point.z = 20
-
-print(point.z)
+point.draw()
