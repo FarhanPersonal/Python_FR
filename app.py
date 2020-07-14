@@ -1,12 +1,16 @@
-# Farhan's solution of fizz_buzz algorithm
-def fizz_buzz(input):
-    if (input % 3 == 0) and (input % 5 == 0):
-        return "fizz buzz"
-    if input % 3 == 0:
-        return "fizz"
-    if input % 5 == 0:
-        return "buzz"
-    return input
+# Creating custom class 'Point'
+class Point:
+    def draw(self):
+        print("draw")
 
 
-print(fizz_buzz(1507))
+# Creating object of Point class
+point = Point()
+
+point.draw()
+
+# Checking of type of 'point' object which is 'Point'
+print(type(point))
+
+# Checking if 'point' is an instance of class 'Point', which is true.
+print(isinstance(point, Point))
