@@ -1,16 +1,16 @@
-# Creating custom class 'Point'
+# Creating custom class 'Point'with constructors.
 class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
     def draw(self):
         print("draw")
 
 
-# Creating object of Point class
-point = Point()
+point = Point(1, 2)
 
-point.draw()
+# FR: Creating attributes/properties of point object outside the class
+point.z = 20
 
-# Checking of type of 'point' object which is 'Point'
-print(type(point))
-
-# Checking if 'point' is an instance of class 'Point', which is true.
-print(isinstance(point, Point))
+print(point.z)
