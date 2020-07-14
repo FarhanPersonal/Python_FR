@@ -1,11 +1,13 @@
-def add(firstNum, secondNum, thirdNum=0):
-    return firstNum + secondNum + thirdNum
+# Farhan's solution of fizz_buzz algorithm
+def fizz_buzz(input):
+    if input % 3 == 0 and input % 5 == 0:
+        return "fizz buzz"
+    elif input % 3 == 0:
+        return "fizz"
+    elif input % 5 == 0:
+        return "buzz"
+    else:
+        return input
 
 
-def subtract(largeNum, amountTobeSubtracted):
-    return largeNum-amountTobeSubtracted
-
-#print(add(firstNum=1, secondNum=2))
-
-
-print(subtract(largeNum=100, amountTobeSubtracted=5))
+print(fizz_buzz(5))
