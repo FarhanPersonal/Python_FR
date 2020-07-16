@@ -8,14 +8,14 @@ class Point:
     def zero(cls): 
         return cls(0,0)
 
-    #Constructor
+    #Constructor, and making 'x' to be a private property
     def __init__(self, x, y):
-        self.x = x
+        self.__x = x
         self.y = y
 
     #Instance method
     def draw(self):
-        print(self.x, self.y)
+        print(self.__x, self.y)
 
 
 point = Point.zero()
