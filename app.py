@@ -17,6 +17,10 @@ class Point:
     def draw(self):
         print(self.__x, self.y)
 
+    #Private Instance method
+    def __privateMethod(self):
+        print(self.__x, self.y)
+
 
 point = Point.zero()
 
