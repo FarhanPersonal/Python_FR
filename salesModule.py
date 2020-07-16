@@ -7,6 +7,7 @@ def GetDateOfSale():
     pass
 
 class Sale():
-    pass
+    def __init__(self):
+        self.madeBy = "Online"
 
 
