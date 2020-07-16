@@ -1,20 +1,30 @@
-class Product: 
-    def __init__(self, price):
-        self.cost=price
-        
-    @property
-    def cost(self): 
-        return self.__price
+# Learning about inheritance
 
-    @cost.setter
-    def cost(self, value):
-        if value <0:
-            raise ValueError("Price cannot be negative")
-        self.__price = value
-    
+#Animal is the base class
+class Animal:
+    def __init__(self):
+        self.age = 1
 
-product = Product(30)
-product.cost=100
+    def eat(self):
+        print("eat")
 
-print(product.cost)
+#Mammal is derived class
+class Mammal(Animal):
+    def walk(self):
+        print("walk")
 
+#Fish is a derived class
+class Fish(Animal):
+    def swim(self):
+        print("swim")
+
+mammal = Mammal()
+mammal.walk()
+mammal.eat()
+
+fish = Fish()
+fish.eat()
+
+
+print("Age of mammal is ", mammal.age)
+print("Age of fish is ", fish.age)
