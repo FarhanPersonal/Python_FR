@@ -1,30 +1,23 @@
-# Learning about inheritance
+from abc import ABC, abstractclassmethod
 
-#Animal is the base class
-class Animal:
+# Stream is an abstract class since it is derived from abstract base class called 'ABC'
+class Stream(ABC):
+
+    # To ensure all derived calss of 'Stream' class has a method named 'read()'
+    # we decorate the read() method with '@abstractclassmethod' decorator
+    @abstractclassmethod
+    def read(self):
+        #we put 'pass' so that we don't need to write anything more for the method
+        pass
+
+
+class MemoryStream(Stream):
     def __init__(self):
-        self.age = 1
+        self.title = "This is a memory stream"
 
-    def eat(self):
-        print("eat")
+# We cannot derive MemoryStream from Stream class unless we implement the read() as we did below:
+    def read(self):
+        return self.title
 
-#Mammal is derived class
-class Mammal(Animal):
-    def walk(self):
-        print("walk")
-
-#Fish is a derived class
-class Fish(Animal):
-    def swim(self):
-        print("swim")
-
-mammal = Mammal()
-mammal.walk()
-mammal.eat()
-
-fish = Fish()
-fish.eat()
-
-
-print("Age of mammal is ", mammal.age)
-print("Age of fish is ", fish.age)
+memoryStream = MemoryStream()
+print(memoryStream.read())
