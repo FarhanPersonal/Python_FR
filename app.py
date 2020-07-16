@@ -1,27 +1,20 @@
-# Creating custom class 'Point'with constructors.
-class Point:
-    # Class level attribute
-    default_color = "red"
+class Product: 
+    def __init__(self, price):
+        self.price=price
+        
+    @property
+    def price(self): 
+        return self.__price
 
-    #Class level method or factory method
-    @classmethod
-    def zero(cls): 
-        return cls(0,0)
+    @price.setter
+    def price(self, value):
+        if value <0:
+            raise ValueError("Price cannot be negative")
+        self.__price = value
+    
 
-    #Constructor, and making 'x' to be a private property
-    def __init__(self, x, y):
-        self.__x = x
-        self.y = y
+product = Product(30)
+product.price=-10
 
-    #Instance method
-    def draw(self):
-        print(self.__x, self.y)
+print(product.price)
 
-    #Private Instance method
-    def __privateMethod(self):
-        print(self.__x, self.y)
-
-
-point = Point.zero()
-
-point.draw()
