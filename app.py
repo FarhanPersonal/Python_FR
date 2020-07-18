@@ -13,9 +13,12 @@ henriImage = cv.imread('data/Henri.jpg', 0)
 print("Shape of henriImage obtained through imread is ", henriImage.shape)
 
 
-array = np.array([1,2,3])
-# print(array)
+array1 = np.zeros((3,4), dtype=int)
 
-print(type(array))
-print(type(insImage))
-# print("Shape of array is ", array.shape)
+array2 = np.ones((3,4), dtype=int)
+
+print(array1)
+print(array2)
+
+
+
