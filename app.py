@@ -1,7 +1,8 @@
+import json
 from pathlib import Path
+ 
+movies = [{ "id": 1, "title": "Terminator", "year": 1984}, { "id": 2, "title": "Kindergarten", "year": 1990}]
 
-path = Path("ecommerce/__init__.py")
-print(path.exists())
+data = json.dumps(movies)
 
-print(path.is_file())
-print(path.is_dir())
+Path("movies.json").write_text(data)
