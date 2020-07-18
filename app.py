@@ -1,8 +1,10 @@
-import json
-from pathlib import Path
- 
-movies = [{ "id": 1, "title": "Terminator", "year": 1984}, { "id": 2, "title": "Kindergarten", "year": 1990}]
+# FR: need to import cv2 like below otherwise doesn't work
+from cv2 import cv2
+import numpy as np
 
-data = json.dumps(movies)
+import matplotlib.pyplot as plt
 
-Path("movies.json").write_text(data)
+insImage = cv2.imread('data/Institute.jpg', 0)
+
+henriImage = cv2.imread('data/Henri.jpg', 0)
+
