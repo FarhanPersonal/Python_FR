@@ -17,8 +17,20 @@ array1 = np.zeros((3,4), dtype=int)
 
 array2 = np.ones((3,4), dtype=int)
 
+# creating array with a specific number
+array3 = np.full((3,4), 5, dtype=int)
+
+# creating array with random number
+array_random = np.random.random((3,4))
+
 print(array1)
 print(array2)
+print(array3)
+print(array_random)
+
+print(type(np))
+print(type(np.random))
+print(type(np.random.random()))
 
 
 
