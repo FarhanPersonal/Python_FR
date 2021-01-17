@@ -1,6 +1,5 @@
-# Following mosh's lecture 5.15:
+# Following mosh's lecture 5.17:
 
-pointArray = [1, 2]
-print(pointArray)
-pointTuple = tuple(pointArray)
-print(pointTuple)
+from array import array
+
+numbers = array('i', [1, 2, 3])
