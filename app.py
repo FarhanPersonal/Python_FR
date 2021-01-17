@@ -1,13 +1,14 @@
-# Following mosh's lecture 5.13:
+# Following mosh's lecture 5.14:
 
-browing_session = []
-browing_session.append(1)
-browing_session.append(2)
-browing_session.append(3)
+from collections import deque
 
-print(browing_session)
+queue = deque([])
+queue.append(1)
+queue.append(2)
+queue.append(3)
 
-last = browing_session.pop()
+queue.popleft()
 
-print(last)
-print("browing session", browing_session)
+print(queue)
+
+#outputs: deque([2, 3])
