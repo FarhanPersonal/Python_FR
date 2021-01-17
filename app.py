@@ -1,11 +1,13 @@
-# Following mosh's lecture 5.12:
+# Following mosh's lecture 5.13:
 
-list1 = [1, 2, 3]
-list2 = [4, 5, 6]
+browing_session = []
+browing_session.append(1)
+browing_session.append(2)
+browing_session.append(3)
 
-zipList = zip(list1, list2)
+print(browing_session)
 
-# Using list() to convert a zip object into a list
-print(list(zipList))
+last = browing_session.pop()
 
-# output is: [(1, 4), (2, 5), (3, 6)]
+print(last)
+print("browing session", browing_session)
