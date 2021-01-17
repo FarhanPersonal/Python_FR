@@ -1,5 +1,10 @@
-# Following mosh's lecture 5.17:
+# Following mosh's lecture 5.18:
 
-from array import array
+numbers = [1, 2, 3, 2, 3]
 
-numbers = array('i', [1, 2, 3])
+firstSet = set(numbers)
+
+secondSet = {3, 4, 5}
+
+# priting union of two sets
+print(firstSet | secondSet)
