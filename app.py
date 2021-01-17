@@ -1,9 +1,6 @@
-numbers = [1, 2, 3]
+# how to loop over list
 
-first, second, third = numbers
+letters = ["a", "b", "c", "d"]
 
-# first = numbers[0]
-# second = numbers[1]
-# third = numbers[2]
-
-print(second)
+for letter in letters:
+    print(letter)
