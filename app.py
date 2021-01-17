@@ -1,12 +1,9 @@
-# Following mosh's lecture 5.8:
+# Following mosh's lecture 5.12:
 
-items = [("product1", 10), ("product2", 5), ("product3", 30)]
+list1 = [1, 2, 3]
+list2 = [4, 5, 6]
 
+zipList = zip(list1, list2)
 
-# def sort_items(item):
-#     return item[1]
-
-
-items.sort(key=lambda item: item[1])
-
-print(items)
+# Using list() to convert a zip object into a list
+print(list(zipList))
