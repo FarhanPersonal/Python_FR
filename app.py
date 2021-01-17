@@ -1,7 +1,9 @@
-letters = ["a", "b", "c"]
+numbers = [1, 2, 3]
 
-matrix = [[0, 1], [2, 3]]
+first, second, third = numbers
 
-zeros = [0] * 100
+# first = numbers[0]
+# second = numbers[1]
+# third = numbers[2]
 
-print(zeros)
+print(second)
