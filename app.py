@@ -1,5 +1,12 @@
-numbers = [1, 5, 2, 3]
+# Following mosh's lecture 5.7:
 
-# numbers.sort(reverse=True)
+items = [("product1", 10), ("product2", 5), ("product3", 30)]
 
-print(sorted(numbers, reverse=True))
+
+def sort_items(item):
+    return item[1]
+
+
+items.sort(key=sort_items)
+
+print(items)
