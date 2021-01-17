@@ -1,3 +1,5 @@
-letters = ["a", "b", "c", "d"]
+numbers = [1, 5, 2, 3]
 
-print(letters.count("d"))
+numbers.sort()
+
+print(numbers)
