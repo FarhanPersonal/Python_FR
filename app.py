@@ -8,3 +8,7 @@ secondSet = {3, 4, 5}
 
 # priting union of two sets
 print(firstSet | secondSet)
+
+print("printing common", firstSet & secondSet)
+
+print("printing either", firstSet ^ secondSet)
