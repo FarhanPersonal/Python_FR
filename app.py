@@ -1,14 +1,12 @@
-# Following mosh's lecture 5.14:
+# Following mosh's lecture 5.15:
 
-from collections import deque
+# A tuple is a read-only list; we cannot modify a tuple
 
-queue = deque([])
-queue.append(1)
-queue.append(2)
-queue.append(3)
+# creating an empty tuple
+point = ()
 
-queue.popleft()
+point = (1, 2) + (3, 4)
 
-print(queue)
+print(type(point))
 
-#outputs: deque([2, 3])
+print(point)
