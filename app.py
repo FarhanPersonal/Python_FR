@@ -7,21 +7,18 @@ z_coord = [0, 0, 1, 1]
 
 y_displ = [1, 7, 5, 1]
 
-x_coord_2d = numpy.reshape(x_coord, (2, 2))
-z_coord_2d = numpy.reshape(z_coord, (2, 2))
+row_wise_data = tuple(zip(x_coord, z_coord, y_displ))
 
-y_displ_2d = numpy.reshape(y_displ, (2, 2))
 
-# need to know y_dipl at location x_coord = 0.5, y_coord = 0.5 (say)
+def get_array_from_tuple(data_tuple, col_indx_in_tuple):
+    data_array = []
+    for i in range(0, len(data_tuple)):
+        data_array.append(data_tuple[i][col_indx_in_tuple])
 
-x_coord_new = 0.5
-z_coord_new = 0.5
+    return data_array
 
-# get interpolation function
-interpolation_output_func = interpolate.interp2d(
-    x_coord_2d, z_coord_2d, y_displ_2d, kind='linear')
 
-# get value of
-y_displ_interpolated = interpolation_output_func(x_coord_new, z_coord_new)
+# getting back y_displ array:
+x_coord_array = get_array_from_tuple(row_wise_data, 2)
 
-print(y_displ_interpolated[0])
+print(x_coord_array)
