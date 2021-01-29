@@ -24,4 +24,4 @@ interpolation_output_func = interpolate.interp2d(
 # get value of
 y_displ_interpolated = interpolation_output_func(x_coord_new, z_coord_new)
 
-print(y_displ_interpolated)
+print(y_displ_interpolated[0])
